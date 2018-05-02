@@ -75,7 +75,7 @@ class Graph(object):
         so don't forget to call `self.add` on each of the variables.
         """
         self.backprop_called = False
-        self.nodeDict = {}      # node -> [node's forward value, node's backward value]
+        self.nodeDict = {}      # node -> [node's forward value, node's backwards-accumulated value]
         self.nodes = []
         self.vars = []
         for var in variables:
